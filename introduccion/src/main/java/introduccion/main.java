@@ -1,6 +1,8 @@
 package introduccion;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
 
 public class main {
@@ -23,7 +25,11 @@ public class main {
 			{
 				palabra = palabra + (char)linea; 
 			}
-			ps.println( palabra );
+			ps.printf( "La variable palabra:%s \n", palabra );
+			
+			InputStreamReader isr = new InputStreamReader (System.in);
+			BufferedReader br = new BufferedReader(isr);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
